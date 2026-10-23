@@ -1,0 +1,11 @@
+.env
+node_modules/
+.camoufox-bin/
+**/.camoufox-bin/
+build/
+*.zip
+.npmrc
+src.zip/
+Updated_zip.zip/
+Updated_zip/
+

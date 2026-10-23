@@ -1,0 +1,17 @@
+services:
+  shipment-tracker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: shipment-tracking-service:latest
+    container_name: shipment_tracker
+    restart: unless-stopped
+    shm_size: '2gb' # Critical for Camoufox / Firefox rendering stability
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+      - HEADLESS=virtual
+      - PORT=3000
+    ports:
+      - "3000:3000"
